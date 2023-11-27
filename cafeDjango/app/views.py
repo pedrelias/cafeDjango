@@ -58,5 +58,25 @@ def exibir_talhoes(request):
     }
     return render(request, 'talhoes.html', context)
 
+def exibir_cidades(request):
+    cidades = Cidade.objects.all()
+    context = {
+        'cidades': cidades,
+    }
+    return render(request, 'cidades.html', context)
+
+def exibir_usuarios(request):
+    usuarios = Usuario.objects.all()
+    context = {
+        'usuarios': usuarios,
+    }
+    return render(request, 'usuarios.html', context)
+
+def exibir_exportadora(request):
+    exportadoras = Exportadora.objects.all()
+    context = {
+        'exportadoras': exportadoras,
+    }
+    return render(request, 'exportadora.html', context)
 
 

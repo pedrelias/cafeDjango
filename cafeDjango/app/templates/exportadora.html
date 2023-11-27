@@ -50,25 +50,23 @@
 
 
   <div class="container mt-5">
-    <h2 class="mb-4">Fazendas</h2>
+    <h2 class="mb-4">Exportadoras</h2>
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Nome da Fazenda</th>
+                <th scope="col">Nome da Exportadora</th>
+                <th scope="col">CNPJ</th>
+                <th scope="col">Endereço</th>
                 <th scope="col">Cidade</th>
-                <th scope="col">Rodovia</th>
-                <th scope="col">Altitude</th>
-                <th scope="col">Área total</th>
             </tr>
         </thead>
         <tbody>
-            {% for fazenda in fazendas %}
+            {% for exportadora in exportadoras %}
                 <tr>
-                    <td>{{ fazenda.nomeFazenda }}</td>
-                    <td>{{ fazenda.cidade }}</td>
-                    <td>{{ fazenda.nomeRodoviaKm }}</td>
-                    <td>{{ fazenda.altitude }}</td>
-                    <td>{{ fazenda.areaTotal }}</td>
+                    <td>{{ exportadora.nome_exportadora }}</td>
+                    <td>{{ exportadora.cnpj }}</td>
+                    <td>{{ exportadora.endereco }}</td>
+                    <td>{{ exportadora.cidade }}</td>
                 </tr>
             {% endfor %}
         </tbody>

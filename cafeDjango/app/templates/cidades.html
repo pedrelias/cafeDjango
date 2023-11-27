@@ -30,13 +30,13 @@
             <a class="nav-link" href="/talhoes/">Talhões</a>
           </li>
         <li class="nav-item">
-            <a class="nav-link" href="/cidades/">Cidades</a>
+            <a class="nav-link" href="/analisesolo/">Cidades</a>
           </li>
         <li class="nav-item">
-            <a class="nav-link" href="/usuarios/">Usuários</a>
+            <a class="nav-link" href="/analisesolo/">Cargos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/exportadora/">Exportadoras</a>
+          <a class="nav-link" href="/analisesolo/">Exportadoras</a>
       </li>
         <li class="nav-item">
             <a class="nav-link" href="/analisesolo/">Análise de Solo</a>
@@ -48,27 +48,20 @@
     </div>
   </nav>
 
-
   <div class="container mt-5">
-    <h2 class="mb-4">Fazendas</h2>
+    <h2 class="mb-4">Cidades</h2>
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Nome da Fazenda</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Rodovia</th>
-                <th scope="col">Altitude</th>
-                <th scope="col">Área total</th>
+                <th scope="col">Nome da Cidade</th>
+                <th scope="col">UF</th>
             </tr>
         </thead>
         <tbody>
-            {% for fazenda in fazendas %}
+            {% for cidade in cidades %}
                 <tr>
-                    <td>{{ fazenda.nomeFazenda }}</td>
-                    <td>{{ fazenda.cidade }}</td>
-                    <td>{{ fazenda.nomeRodoviaKm }}</td>
-                    <td>{{ fazenda.altitude }}</td>
-                    <td>{{ fazenda.areaTotal }}</td>
+                    <td>{{ cidade.nome_cidade }}</td>
+                    <td>{{ cidade.uf }}</td>
                 </tr>
             {% endfor %}
         </tbody>

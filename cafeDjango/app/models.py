@@ -1,13 +1,13 @@
 from django.db import models
 
 class Cidade(models.Model):
-    nomeCidade = models.CharField(max_length=50)
+    nome_cidade = models.CharField(max_length=50)
     uf = models.CharField(max_length=2)
     class Meta:
         verbose_name = "Cidade"
         verbose_name_plural = "Cidades"
     def __str__(self):
-        return f'{self.nomeCidade} {self.uf}'
+        return f'{self.nome_cidade} {self.uf}'
     
 class Cargo(models.Model):
     nomeCargo = models.CharField(max_length=50)
@@ -18,7 +18,7 @@ class Cargo(models.Model):
         return self.nomeCargo
     
 class Usuario(models.Model):
-    nomeUsuario = models.CharField(max_length=50)
+    nome_usuario = models.CharField(max_length=50)
     cpf = models.CharField(max_length=11)
     cargo = models.ForeignKey(Cargo, on_delete=models.CASCADE)
     cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
@@ -26,7 +26,8 @@ class Usuario(models.Model):
             verbose_name = "Usuario"
             verbose_name_plural = "Usuarios"
     def __str__(self):
-        return f'{self.nomeUsuario} {self.cpf} {self.cargo} {self.cidade}'
+        return f'{self.nome_usuario} {self.cpf} {self.cargo} {self.cidade}'
+
 
 class Fazenda(models.Model):
     nomeFazenda = models.CharField(max_length=50)
