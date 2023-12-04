@@ -13,4 +13,4 @@ urlpatterns = [
     path('usuarios/', views.exibir_usuarios, name='Usuários'),
     path('exportadora/', views.exibir_exportadora, name='Exportadoras'),
     path('exportar_analises_csv/', views.exportar_analises_csv, name='exportar_analises_csv'),
-]
+]   
